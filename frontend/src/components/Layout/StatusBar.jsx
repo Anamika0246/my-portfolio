@@ -13,7 +13,7 @@ import { VscSourceControl, VscError, VscWarning, VscBell } from 'react-icons/vsc
 const StatusBar = () => {
   return (
     <div 
-      className="h-[22px] flex items-center justify-between px-3 text-[12px]"
+      className="h-5.5 flex items-center justify-between px-3 text-[12px]"
       style={{ 
         backgroundColor: 'var(--vscode-statusbar-bg)',
         color: 'var(--vscode-text-active)'

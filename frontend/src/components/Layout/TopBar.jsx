@@ -16,58 +16,54 @@ const TopBar = () => {
          style={{ backgroundColor: 'var(--vscode-titlebar-bg)', color: 'var(--vscode-text)' }}>
       
       {/* Left section - Logo and Menu items */}
-      <div className="flex items-center h-full">
+      <div className="flex items-center h-full gap-2">
         {/* VS Code Logo */}
         <div className="px-3 h-full flex items-center">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.5725 1.0039L4.47754 7.1289L1.85254 5.2539L0.97754 5.7539L4.47754 8.8789L11.5725 2.0039V1.0039Z" fill="#007ACC"/>
-            <path d="M11.5725 5.3789L4.47754 11.5039L1.85254 9.6289L0.97754 10.1289L4.47754 13.2539L11.5725 6.3789V5.3789Z" fill="#007ACC"/>
-            <path d="M15.0725 1.12894L11.5725 0.00390625V15.0039L15.0725 13.8789V1.12894Z" fill="#007ACC"/>
-          </svg>
+          <img src="/vscode-logo.png" alt="VS Code Logo" width="16" height="16" />
         </div>
         
         {/* Menu Items */}
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           File
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Edit
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Selection
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           View
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Go
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Run
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Terminal
         </button>
-        <button className="hover:bg-[#3e3e42] px-3 h-full transition-colors">
+        <button className="hover:bg-[#3e3e42] px-4 py-1 h-full transition-colors">
           Help
         </button>
       </div>
 
       {/* Center section - Navigation and Search */}
-      <div className="flex items-center gap-1 flex-1 justify-center max-w-[600px] px-4">
-        <button className="hover:bg-[#3e3e42] p-1.5 rounded transition-colors">
+      <div className="flex items-center gap-4 flex-1 justify-center px-8">
+        <button className="hover:bg-[#3e3e42] p-1.5 rounded transition-colors shrink-0">
           <VscChevronLeft className="text-[14px]" />
         </button>
-        <button className="hover:bg-[#3e3e42] p-1.5 rounded transition-colors">
+        <button className="hover:bg-[#3e3e42] p-1.5 rounded transition-colors shrink-0">
           <VscChevronRight className="text-[14px]" />
         </button>
         
-        {/* Search Bar */}
-        <div className="flex-1 max-w-[500px] relative ml-2">
+        {/* Search Bar - Expanded */}
+        <div className="flex-1 max-w-150 relative ml-5">
           <input
             type="text"
             placeholder="MyPortfolio"
-            className="w-full pl-7 pr-3 py-1 rounded-sm text-[13px] outline-none"
+            className="w-full pl-8 pr-3 py-1.5 rounded-sm text-[13px] outline-none"
             style={{
               backgroundColor: 'var(--vscode-input-bg)',
               color: 'var(--vscode-text)',
@@ -75,7 +71,7 @@ const TopBar = () => {
             }}
             readOnly
           />
-          <VscSearch className="absolute left-2 top-1/2 -translate-y-1/2 text-[13px]" 
+          <VscSearch className="absolute left-1 top-1/2 -translate-y-1/2 text-[14px]" 
                      style={{ color: 'var(--vscode-text-secondary)' }} />
         </div>
       </div>

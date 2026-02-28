@@ -10,7 +10,7 @@ import { VscBriefcase, VscLocation, VscCalendar } from 'react-icons/vsc';
  * - Each item has date, company, role, and achievements
  */
 
-const ExperienceItem = ({ experience, index }) => {
+const ExperienceItem = ({ experience, index, isLast }) => {
   return (
     <motion.div
       className="flex gap-6 mb-8"
@@ -24,7 +24,7 @@ const ExperienceItem = ({ experience, index }) => {
           className="w-4 h-4 rounded-full border-2"
           style={{ borderColor: 'var(--vscode-accent)', backgroundColor: 'var(--vscode-bg)' }}
         />
-        {index !== experiences.length - 1 && ( // Don't show line for last item
+        {!isLast && ( // Don't show line for last item
           <div 
             className="w-[2px] flex-1 mt-2"
             style={{ backgroundColor: 'var(--vscode-border)' }}
@@ -106,11 +106,11 @@ const ExperiencePage = () => {
       location: 'India',
       duration: 'May 2025 - Jul 2025',
       type: 'Internship',
-      description: 'Designed and developed enterprise-level backend systems using NestJS and PostgreSQL, following microservices architecture and Agile methodologies.',
+      description: 'Designed and developed enterprise-level backend systems using NestJS and PostgreSQL, following clean architecture principles and Agile methodologies.',
       achievements: [
-        'Designed and developed a modular blogging backend using NestJS and PostgreSQL',
-        'Implemented 15+ RESTful APIs with JWT authentication and rule-based access control',
-        'Designed normalized relational schemas and optimized queries for improved performance',
+        'Designed and developed a modular blogging backend using NestJS and PostgreSQL following clean architecture principles',
+        'Implemented 15+ RESTful APIs with JWT authentication and role-based access control',
+        'Designed normalized relational schema and optimized queries for improved performance',
         'Automated API documentation using Swagger, improving developer collaboration',
         'Worked in Agile sprint environment with peer code reviews and Git workflows'
       ],
@@ -137,7 +137,12 @@ const ExperiencePage = () => {
       {/* Timeline */}
       <div className="max-w-4xl">
         {experiences.map((experience, index) => (
-          <ExperienceItem key={index} experience={experience} index={index} />
+          <ExperienceItem 
+            key={index} 
+            experience={experience} 
+            index={index} 
+            isLast={index === experiences.length - 1}
+          />
         ))}
       </div>
     </div>

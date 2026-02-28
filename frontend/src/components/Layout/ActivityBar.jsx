@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { VscFiles, VscSearch, VscSourceControl, VscDebugAlt, VscExtensions, VscAccount } from 'react-icons/vsc';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * ActivityBar Component - The leftmost vertical bar with icons
@@ -14,6 +15,7 @@ import { VscFiles, VscSearch, VscSourceControl, VscDebugAlt, VscExtensions, VscA
  * - When state changes, React re-renders the component
  */
 const ActivityBar = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
   
   // Array of tab items - makes our code cleaner and easier to modify
   const tabs = [
@@ -63,9 +65,10 @@ const ActivityBar = ({ activeTab, setActiveTab }) => {
       {/* Account button at bottom */}
       <div className="mt-auto">
         <button
+          onClick={() => navigate('/home')}
           className="w-full h-[48px] flex items-center justify-center hover:bg-[#3e3e42] transition-colors"
           style={{ color: 'var(--vscode-icon)' }}
-          title="Account"
+          title="Account - Go to Home"
         >
           <VscAccount className="text-[24px]" />
         </button>

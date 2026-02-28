@@ -46,12 +46,16 @@ const EditorArea = ({ openTabs, onCloseTab }) => {
         <Route path="/about" element={<AboutPage />} />
         
         {/* Project routes */}
-        <Route path="/projects/frontend/project1" element={<ProjectPage category="Frontend" projectId="1" />} />
-        <Route path="/projects/frontend/project2" element={<ProjectPage category="Frontend" projectId="2" />} />
-        <Route path="/projects/backend/project1" element={<ProjectPage category="Backend" projectId="1" />} />
-        <Route path="/projects/fullstack/project1" element={<ProjectPage category="Full Stack" projectId="1" />} />
-        <Route path="/projects/ml/project1" element={<ProjectPage category="ML" projectId="1" />} />
-        <Route path="/projects/android/project1" element={<ProjectPage category="Android" projectId="1" />} />
+        <Route path="/projects/frontend/1" element={<ProjectPage category="Frontend" projectId="1" />} />
+        <Route path="/projects/frontend/2" element={<ProjectPage category="Frontend" projectId="2" />} />
+        <Route path="/projects/backend/1" element={<ProjectPage category="Backend" projectId="1" />} />
+        <Route path="/projects/fullstack/1" element={<ProjectPage category="Full Stack" projectId="1" />} />
+        <Route path="/projects/fullstack/2" element={<ProjectPage category="Full Stack" projectId="2" />} />
+        <Route path="/projects/fullstack/3" element={<ProjectPage category="Full Stack" projectId="3" />} />
+        <Route path="/projects/ml/1" element={<ProjectPage category="ML" projectId="1" />} />
+        <Route path="/projects/ml/2" element={<ProjectPage category="ML" projectId="2" />} />
+        <Route path="/projects/android/1" element={<ProjectPage category="Android" projectId="1" />} />
+        <Route path="/projects/cpp/1" element={<ProjectPage category="C++" projectId="1" />} />
       </Routes>
       </div>
     </div>

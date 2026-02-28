@@ -10,8 +10,8 @@ import { useNavigate } from 'react-router-dom';
  * This component calls itself for nested folders - like a folder within a folder!
  * This is called recursion and it's perfect for tree structures.
  */
-const FileTreeItem = ({ item, level = 0, onOpenTab }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FileTreeItem = ({ item, level = 0, onOpenTab, defaultOpen = false }) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const navigate = useNavigate();
 
   // Check if item has children (is a folder)
@@ -71,6 +71,7 @@ const FileTreeItem = ({ item, level = 0, onOpenTab }) => {
                 item={child} 
                 level={level + 1} // Increase indent level
                 onOpenTab={onOpenTab} // Pass down the onOpenTab function
+                defaultOpen={false} // Children are closed by default
               />
             ))}
           </motion.div>
@@ -106,32 +107,41 @@ const Sidebar = ({ activeTab, onOpenTab }) => {
             {
               name: 'Frontend',
               children: [
-                { name: 'Project1.jsx', path: '/projects/frontend/project1', icon: <VscFile />, color: '#61DAFB' },
-                { name: 'Project2.jsx', path: '/projects/frontend/project2', icon: <VscFile />, color: '#61DAFB' },
+                { name: 'SrajnikLab.jsx', path: '/projects/frontend/1', icon: <VscFile />, color: '#61DAFB' },
+                { name: 'AquariusRO.jsx', path: '/projects/frontend/2', icon: <VscFile />, color: '#61DAFB' },
               ]
             },
             {
               name: 'Backend',
               children: [
-                { name: 'Project1.js', path: '/projects/backend/project1', icon: <VscFile />, color: '#F7DF1E' },
+                { name: 'BlogNest.js', path: '/projects/backend/1', icon: <VscFile />, color: '#F7DF1E' },
               ]
             },
             {
               name: 'FullStack',
               children: [
-                { name: 'Project1.jsx', path: '/projects/fullstack/project1', icon: <VscFile />, color: '#61DAFB' },
+                { name: 'HostelERP.jsx', path: '/projects/fullstack/1', icon: <VscFile />, color: '#61DAFB' },
+                { name: 'BooksBhandar.jsx', path: '/projects/fullstack/2', icon: <VscFile />, color: '#61DAFB' },
+                { name: 'LetsDiscuss.jsx', path: '/projects/fullstack/3', icon: <VscFile />, color: '#61DAFB' },
               ]
             },
             {
               name: 'ML',
               children: [
-                { name: 'Project1.py', path: '/projects/ml/project1', icon: <VscFile />, color: '#3776AB' },
+                { name: 'MITRA.py', path: '/projects/ml/1', icon: <VscFile />, color: '#3776AB' },
+                { name: 'EaseQL.py', path: '/projects/ml/2', icon: <VscFile />, color: '#3776AB' },
               ]
             },
             {
               name: 'Android',
               children: [
-                { name: 'Project1.kt', path: '/projects/android/project1', icon: <VscFile />, color: '#A97BFF' },
+                { name: 'Friendly.jsx', path: '/projects/android/1', icon: <VscFile />, color: '#A97BFF' },
+              ]
+            },
+            {
+              name: 'C++',
+              children: [
+                { name: 'ECommerce.cpp', path: '/projects/cpp/1', icon: <VscFile />, color: '#00599C' },
               ]
             },
           ]
@@ -167,7 +177,7 @@ const Sidebar = ({ activeTab, onOpenTab }) => {
       {/* File tree */}
       <div className="flex-1">
         {explorerData.map((item, index) => (
-          <FileTreeItem key={index} item={item} onOpenTab={onOpenTab} />
+          <FileTreeItem key={index} item={item} onOpenTab={onOpenTab} defaultOpen={true} />
         ))}
       </div>
     </div>

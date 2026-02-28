@@ -8,6 +8,7 @@ import ActivityBar from './components/Layout/ActivityBar';
 import Sidebar from './components/Layout/Sidebar';
 import EditorArea from './components/Layout/EditorArea';
 import StatusBar from './components/Layout/StatusBar';
+import MobileWarning from './components/Layout/MobileWarning';
 
 /**
  * Main App Component
@@ -63,6 +64,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
+        {/* Mobile warning popup */}
+        <MobileWarning />
+        
         {/* Top title bar */}
         <TopBar />
         

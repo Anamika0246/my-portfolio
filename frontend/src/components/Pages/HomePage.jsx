@@ -108,7 +108,7 @@ const HomePage = () => {
               <span style={{ color: '#4FC1FF' }}>developer</span> = {'{'}{'\n'}
               {'  '}name: <span style={{ color: '#CE9178' }}>"Anamika Tiwari"</span>,{'\n'}
               {'  '}role: <span style={{ color: '#CE9178' }}>"Associate Software Engineer Intern"</span>,{'\n'}
-              {'  '}passion: [<span style={{ color: '#CE9178' }}>"NestJS"</span>, <span style={{ color: '#CE9178' }}>"React"</span>, <span style={{ color: '#CE9178' }}>"AI/ML"</span>],{'\n'}
+              {'  '}passion: [<span style={{ color: '#CE9178' }}>"MERN"</span>, <span style={{ color: '#CE9178' }}>"CPP"</span>, <span style={{ color: '#CE9178' }}>"AI/ML"</span>],{'\n'}
               {'  '}available: <span style={{ color: '#569CD6' }}>true</span>{'\n'}
               {'}'};
             </code>

@@ -19,3 +19,19 @@
 .smooth-transition {
   transition: all 0.2s ease-in-out;
 }
+
+/* Mobile warning animation */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}

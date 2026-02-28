@@ -95,7 +95,7 @@ const EducationPage = () => {
       institution: 'Maharana Pratap Engineering College',
       location: 'India',
       duration: 'Sep 2022 - Jul 2026',
-      gpa: 'Honors in Cybersecurity',
+      gpa: '9.05/10',
       highlights: [
         'Specialization in Data Science with Honors in Cybersecurity',
         'Managing Director of TECH-E-CLAN (MPGI)',

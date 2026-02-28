@@ -18,20 +18,84 @@ import { VscGithub, VscLinkExternal, VscCode, VscCalendar } from 'react-icons/vs
 const ProjectPage = ({ category, projectId }) => {
   // Project data - in a real app, this would come from an API or database
   const projectsData = {
+    'Frontend': {
+      '1': {
+        title: 'Srajnik Lab Website - React Platform',
+        description: 'SEO-optimized responsive platform using React and Tailwind CSS.',
+        longDescription: 'Developed SEO-optimized responsive platform using React and Tailwind CSS. Integrated Framer Motion animations to enhance UX and deployed on Vercel with optimized build configuration.',
+        technologies: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Vercel', 'SEO'],
+        features: [
+          'Developed SEO-optimized responsive platform using React and Tailwind CSS',
+          'Integrated Framer Motion animations to enhance UX',
+          'Deployed on Vercel with optimized build configuration',
+          'Fully responsive design across all devices',
+          'Modern and clean UI design',
+          'Fast loading with optimized build'
+        ],
+        challenges: 'Ensuring smooth animations while maintaining optimal performance and SEO scores.',
+        solution: 'Used Framer Motion for declarative animations and implemented code splitting with lazy loading to maintain 90+ Lighthouse scores.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Jan 2025',
+        status: 'Completed'
+      },
+      '2': {
+        title: 'Aquarius RO - Water Delivery Service',
+        description: 'Frontend website for a local RO water can delivery venture.',
+        longDescription: 'Developed a professional frontend website for Aquarius, a local venture providing RO water can delivery services. Built with modern web technologies featuring responsive design, user-friendly interface, and optimized performance for seamless customer experience.',
+        technologies: ['React.js', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
+        features: [
+          'Clean and modern UI design',
+          'Fully responsive across all devices',
+          'Service information and pricing display',
+          'Contact and ordering interface',
+          'Fast loading and optimized performance',
+          'Deployed and accessible online'
+        ],
+        challenges: 'Creating an intuitive interface for local customers while maintaining professional aesthetics.',
+        solution: 'Designed a simple yet elegant UI focusing on clear service information and easy navigation.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: 'https://drinkaquarius.in/',
+        date: 'Dec 2024',
+        status: 'Completed'
+      }
+    },
+    'Backend': {
+      '1': {
+        title: 'BlogNest - NestJS Blogging Platform',
+        description: 'Microservices-based blogging platform built using NestJS framework.',
+        longDescription: 'Built a blogging platform using NestJS framework following microservices architecture. Individual services for Users, Posts, and Comments, each handling its own database, routing, and business logic. Implemented JWT authentication, role-based access control, and automated API documentation using Swagger.',
+        technologies: ['NestJS', 'PostgreSQL', 'TypeScript', 'JWT', 'Swagger', 'Microservices'],
+        features: [
+          'Microservices architecture with separate User, Post, and Comment services',
+          'User registration and authentication with JWT',
+          'Blog post creation and retrieval by post or by user',
+          'Comment system for posts',
+          'Automated API documentation with Swagger',
+          'Role-based access control',
+          'Clean architecture principles'
+        ],
+        challenges: 'Implementing microservices communication and maintaining data consistency across services.',
+        solution: 'Designed clear service boundaries with well-defined APIs and implemented proper error handling and validation.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Jun 2025',
+        status: 'Completed'
+      }
+    },
     'Full Stack': {
       '1': {
         title: 'Hostel ERP - MERN Stack',
         description: 'Full-stack hostel management system with modules for allocation, attendance, and notices.',
-        longDescription: 'Built a comprehensive hostel management system using the MERN stack featuring secure REST APIs with JWT-based role authorization, Redux state management for real-time UI updates, and optimized MongoDB schemas for scalable and efficient queries.',
+        longDescription: 'Built full-stack hostel management system with modules for allocation, attendance, and notices. Developed secure REST APIs with JWT-based role authorization, integrated Redux state management enabling real-time UI updates, and structured MongoDB schema for scalable and efficient queries.',
         technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Redux', 'JWT', 'REST APIs'],
         features: [
-          'Hostel allocation and room management',
-          'Attendance tracking system',
-          'Notice board and announcements',
-          'Secure JWT-based role authorization',
-          'Redux state management for real-time updates',
-          'Scalable MongoDB schema design',
-          'Responsive UI with React.js'
+          'Built full-stack hostel management system with modules for allocation, attendance, and notices',
+          'Developed secure REST APIs with JWT-based role authorization',
+          'Integrated Redux state management enabling real-time UI updates',
+          'Structured MongoDB schema for scalable and efficient queries',
+          'Responsive UI with React.js',
+          'Role-based access control for different user types'
         ],
         challenges: 'Managing complex state across multiple modules and ensuring real-time synchronization between different user roles (students, wardens, admins).',
         solution: 'Implemented Redux for centralized state management and used JWT-based role authorization to handle different permission levels efficiently.',
@@ -41,39 +105,60 @@ const ProjectPage = ({ category, projectId }) => {
         status: 'Completed'
       },
       '2': {
-        title: 'Srajinik Labs Website - React Platform',
-        description: 'SEO optimized responsive platform developed using React and Tailwind CSS.',
-        longDescription: 'Developed a professional, SEO-optimized responsive website for Srajinik Labs featuring smooth animations, modern UI/UX design, and deployed on Vercel with optimized build configuration for maximum performance.',
-        technologies: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+        title: 'Books Bhandar - Book Management System',
+        description: 'Web application for managing book collections with CRUD operations.',
+        longDescription: 'Books Bhandar is a web application for managing book collections. Features options to add, view, edit, and delete books with a clean, responsive interface. The app offers table and card view layouts for convenience, showcasing modern web development with an intuitive UI.',
+        technologies: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
         features: [
-          'SEO optimized for better search rankings',
-          'Fully responsive design across all devices',
-          'Framer Motion animations for enhanced UX',
-          'Modern and clean UI design',
-          'Fast loading with optimized build',
-          'Deployed on Vercel with CI/CD'
+          'Complete CRUD operations for book management',
+          'Dual view modes: table and card layout',
+          'Clean and responsive interface',
+          'RESTful API backend',
+          'MongoDB database integration',
+          'Modern and intuitive UI design'
         ],
-        challenges: 'Ensuring smooth animations while maintaining optimal performance and SEO scores.',
-        solution: 'Used Framer Motion for declarative animations and implemented code splitting with lazy loading to maintain 90+ Lighthouse scores.',
+        challenges: 'Implementing efficient CRUD operations with seamless UI transitions between different view modes.',
+        solution: 'Built RESTful APIs with Express and used React state management for smooth view transitions.',
         githubUrl: 'https://github.com/Anamika0246',
         liveUrl: null,
-        date: 'Jan 2025',
+        date: 'Oct 2024',
+        status: 'Completed'
+      },
+      '3': {
+        title: 'LetsDiscuss - Real-time Chat Application',
+        description: 'Modern real-time chat application with Socket.IO and MERN stack.',
+        longDescription: 'A modern real-time chat application built with the MERN stack and Socket.IO. Features user authentication with JWT, instant messaging, persistent chat history, and modern UI with Tailwind CSS and DaisyUI. Plans to expand into voice discussion communities using WebRTC.',
+        technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Socket.IO', 'JWT', 'Tailwind CSS', 'DaisyUI'],
+        features: [
+          'User authentication with JWT tokens',
+          'Real-time messaging using Socket.IO',
+          'Persistent chat conversations with MongoDB',
+          'Modern UI with Tailwind CSS and DaisyUI',
+          'User profiles and contact lists',
+          'Message history tracking',
+          'Responsive design'
+        ],
+        challenges: 'Implementing real-time bidirectional communication with proper state synchronization.',
+        solution: 'Utilized Socket.IO for WebSocket connections and designed proper event handlers for real-time message delivery.',
+        githubUrl: 'https://github.com/Anamika0246/Lets-Discuss',
+        liveUrl: null,
+        date: 'Dec 2024',
         status: 'Completed'
       }
     },
     'ML': {
       '1': {
         title: 'MITRA - AI Medical Chatbot',
-        description: 'RAG-enabled AI chatbot with Pinecone for contextual medical query resolution.',
-        longDescription: 'Engineered an intelligent medical chatbot using Retrieval-Augmented Generation (RAG) architecture with Pinecone vector database for contextual query resolution. Implemented vector similarity search for low latency retrieval and optimized embedding indexing for improved response relevance.',
-        technologies: ['Python', 'LangChain', 'Pinecone', 'Sentence Transformers', 'RAG', 'NLP'],
+        description: 'RAG pipeline using LangChain and Pinecone for contextual medical query resolution.',
+        longDescription: 'Built RAG pipeline using LangChain and Pinecone for contextual medical query resolution. Implemented vector similarity search for low-latency retrieval and optimized embedding indexing for improved response relevance.',
+        technologies: ['Python', 'LangChain', 'Pinecone', 'RAG', 'Vector Search', 'NLP', 'Embeddings'],
         features: [
-          'RAG-enabled architecture for accurate responses',
-          'Pinecone vector database for fast retrieval',
-          'Vector similarity search for low latency',
-          'Contextual medical query resolution',
-          'Optimized embedding indexing',
-          'Natural language understanding'
+          'Built RAG pipeline using LangChain and Pinecone for contextual medical query resolution',
+          'Implemented vector similarity search for low-latency retrieval',
+          'Optimized embedding indexing for improved response relevance',
+          'Contextual medical information retrieval',
+          'Natural language understanding',
+          'Fast and accurate query responses'
         ],
         challenges: 'Achieving low latency retrieval while maintaining high accuracy in medical query responses.',
         solution: 'Implemented vector similarity search with Pinecone and optimized embedding indexing to balance speed and relevance.',
@@ -81,7 +166,141 @@ const ProjectPage = ({ category, projectId }) => {
         liveUrl: null,
         date: 'Mar 2025',
         status: 'Completed'
+      },
+      '2': {
+        title: 'EaseQL - Text-to-SQL NLP System',
+        description: 'NLP system for generating SQL queries from natural language using LLM.',
+        longDescription: 'Built a lightweight Text-to-SQL system that converts natural language queries into executable SQL using an LLM. The system accepts user questions, generates schema-aware SQL queries, validates them to allow only safe SELECT operations, and executes them against a relational database, returning both the query and results in real time. Implemented secure query filtering to prevent destructive commands and designed structured prompt engineering for accurate SQL generation.',
+        technologies: ['FastAPI', 'Python', 'SQLite', 'Groq API', 'JavaScript', 'HTML', 'NLP'],
+        features: [
+          'Schema-aware Text-to-SQL pipeline using FastAPI and LLM',
+          'Natural language to SQL query conversion',
+          'Secure query validation (SELECT-only enforcement)',
+          'Real-time database query execution',
+          'Structured prompt engineering for accurate generation',
+          'Prevention of destructive SQL commands',
+          'Web-based interface for easy interaction'
+        ],
+        challenges: 'Ensuring secure SQL generation while maintaining accuracy and preventing SQL injection or destructive commands.',
+        solution: 'Implemented query validation layer that filters all queries to allow only SELECT operations and designed schema-aware prompts.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Feb 2025',
+        status: 'Completed'
       }
+    },
+    'Android': {
+      '1': {
+        title: 'Friendly - Social Media Platform',
+        description: 'Social media app built with React Native, Express, Node.js, MongoDB, and WebSockets.',
+        longDescription: 'Friendly is a comprehensive social media platform built using React Native Expo for cross-platform mobile development. Features include user profiles, posts, snaps, real-time chat with WebSockets, friend profile suggestions, and media uploads using Cloudinary. Built with Express and Node.js backend connected to MongoDB database.',
+        technologies: ['React Native', 'Expo', 'Express.js', 'Node.js', 'MongoDB', 'Cloudinary', 'WebSockets'],
+        features: [
+          'User authentication and profile management',
+          'Post creation and feed',
+          'Snaps/Stories feature',
+          'Real-time chat using WebSockets',
+          'Friend profile suggestions',
+          'Media uploads with Cloudinary integration',
+          'Cross-platform mobile app with React Native Expo'
+        ],
+        challenges: 'Implementing real-time features and media uploads in a mobile environment while maintaining performance.',
+        solution: 'Used WebSockets for real-time communication and Cloudinary for optimized media handling and delivery.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Jan 2025',
+        status: 'Completed'
+      }
+    },
+    'C++': {
+      '1': {
+        title: 'E-Commerce Online Store - STL Implementation',
+        description: 'E-Commerce platform built using C++ and implementing STL concepts.',
+        longDescription: 'E-Commerce online store built using C++ and implementing Standard Template Library (STL) concepts to perform different tasks. Features admin and customer menus with functionality for user registration, login, product management, order placement, and order history viewing. Demonstrates object-oriented programming with Product and Order classes.',
+        technologies: ['C++', 'STL', 'OOP', 'Data Structures'],
+        features: [
+          'Admin menu for product management',
+          'Customer menu for shopping',
+          'User registration and login system',
+          'Product viewing and browsing',
+          'Order placement functionality',
+          'Order history tracking',
+          'STL containers for data management',
+          'Object-oriented design with Product and Order classes'
+        ],
+        challenges: 'Managing complex data structures and user sessions in C++ without a database.',
+        solution: 'Leveraged STL containers (vectors, maps) for efficient data storage and retrieval with proper memory management.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Sep 2024',
+        status: 'Completed'      },
+      '2': {
+        title: 'EaseQL - Text-to-SQL NLP System',
+        description: 'NLP system for generating SQL queries from natural language using LLM.',
+        longDescription: 'Built a lightweight Text-to-SQL system that converts natural language queries into executable SQL using an LLM. The system accepts user questions, generates schema-aware SQL queries, validates them to allow only safe SELECT operations, and executes them against a relational database, returning both the query and results in real time. Implemented secure query filtering to prevent destructive commands and designed structured prompt engineering for accurate SQL generation.',
+        technologies: ['FastAPI', 'Python', 'SQLite', 'Groq API', 'JavaScript', 'HTML', 'NLP'],
+        features: [
+          'Schema-aware Text-to-SQL pipeline using FastAPI and LLM',
+          'Natural language to SQL query conversion',
+          'Secure query validation (SELECT-only enforcement)',
+          'Real-time database query execution',
+          'Structured prompt engineering for accurate generation',
+          'Prevention of destructive SQL commands',
+          'Web-based interface for easy interaction'
+        ],
+        challenges: 'Ensuring secure SQL generation while maintaining accuracy and preventing SQL injection or destructive commands.',
+        solution: 'Implemented query validation layer that filters all queries to allow only SELECT operations and designed schema-aware prompts.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Feb 2025',
+        status: 'Completed'
+      }
+    },
+    'Android': {
+      '1': {
+        title: 'Friendly - Social Media Platform',
+        description: 'Social media app built with React Native, Express, Node.js, MongoDB, and WebSockets.',
+        longDescription: 'Friendly is a comprehensive social media platform built using React Native Expo for cross-platform mobile development. Features include user profiles, posts, snaps, real-time chat with WebSockets, friend profile suggestions, and media uploads using Cloudinary. Built with Express and Node.js backend connected to MongoDB database.',
+        technologies: ['React Native', 'Expo', 'Express.js', 'Node.js', 'MongoDB', 'Cloudinary', 'WebSockets'],
+        features: [
+          'User authentication and profile management',
+          'Post creation and feed',
+          'Snaps/Stories feature',
+          'Real-time chat using WebSockets',
+          'Friend profile suggestions',
+          'Media uploads with Cloudinary integration',
+          'Cross-platform mobile app with React Native Expo'
+        ],
+        challenges: 'Implementing real-time features and media uploads in a mobile environment while maintaining performance.',
+        solution: 'Used WebSockets for real-time communication and Cloudinary for optimized media handling and delivery.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Jan 2025',
+        status: 'Completed'
+      }
+    },
+    'C++': {
+      '1': {
+        title: 'E-Commerce Online Store - STL Implementation',
+        description: 'E-Commerce platform built using C++ and implementing STL concepts.',
+        longDescription: 'E-Commerce online store built using C++ and implementing Standard Template Library (STL) concepts to perform different tasks. Features admin and customer menus with functionality for user registration, login, product management, order placement, and order history viewing. Demonstrates object-oriented programming with Product and Order classes.',
+        technologies: ['C++', 'STL', 'OOP', 'Data Structures'],
+        features: [
+          'Admin menu for product management',
+          'Customer menu for shopping',
+          'User registration and login system',
+          'Product viewing and browsing',
+          'Order placement functionality',
+          'Order history tracking',
+          'STL containers for data management',
+          'Object-oriented design with Product and Order classes'
+        ],
+        challenges: 'Managing complex data structures and user sessions in C++ without a database.',
+        solution: 'Leveraged STL containers (vectors, maps) for efficient data storage and retrieval with proper memory management.',
+        githubUrl: 'https://github.com/Anamika0246',
+        liveUrl: null,
+        date: 'Sep 2024',
+        status: 'Completed'      }
     }
   };
 

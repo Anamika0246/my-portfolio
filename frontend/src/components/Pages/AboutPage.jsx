@@ -44,9 +44,8 @@ const AboutPage = () => {
           </p>
           <p className="mb-4 leading-relaxed">
             I specialize in full-stack development with a focus on backend technologies and AI/ML integration. 
-            Currently interning at Accenture as an Associate Software Engineer, where I work on enterprise-level 
-            applications using NestJS and PostgreSQL. When I'm not coding, you can find me solving LeetCode problems 
-            (250+ solved!), contributing to technical communities, or exploring new technologies.
+            Interned at Accenture as an Associate Software Engineer, where I worked on enterprise-level 
+            applications using NestJS and PostgreSQL. When I'm not coding, you can find me keeping it in the loop with what's hot off the press, contributing to technical communities, or exploring new technologies.
           </p>
         </div>
 

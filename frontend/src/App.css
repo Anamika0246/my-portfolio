@@ -1,0 +1,21 @@
+/* Main App Container */
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--vscode-bg);
+}
+
+/* Layout Grid */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Transitions for smooth interactions */
+.smooth-transition {
+  transition: all 0.2s ease-in-out;
+}
